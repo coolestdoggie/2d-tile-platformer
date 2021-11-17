@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class Moving : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 10f;
-    [SerializeField] float padding = 1f;
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private GameObject player;
     
-    float xMin;
-    float xMax;
-    float yMin;
-    float yMax;
+    private float xMin;
+    private float xMax;
+    private float yMin;
+    private float yMax;
     
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
 
-        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
-
-        transform.position = new Vector2(newXPos, newYPos);
-
+        Vector3 movement = new Vector3(deltaX, deltaY, 0);
+        player.transform.position += movement;
     }
 }
