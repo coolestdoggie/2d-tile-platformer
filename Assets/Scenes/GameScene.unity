@@ -2211,4 +2211,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  padding: 1
+  player: {fileID: 2145663494}

@@ -17,14 +17,14 @@ public class Jumping : MonoBehaviour
     bool isGrounded;
 
     Rigidbody2D rgbd2D;
-    Animator animator;
+   // Animator animator;
 
     public float LeftExtraJumps { get => leftJumps; set => leftJumps = value; }
 
     void Awake()
     {
         rgbd2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -45,7 +45,7 @@ public class Jumping : MonoBehaviour
             jump = true;
         }
 
-        animator.SetFloat("velocityY", Mathf.Abs(rgbd2D.velocity.y));
+     //   animator.SetFloat("velocityY", Mathf.Abs(rgbd2D.velocity.y));
     }
 
 
