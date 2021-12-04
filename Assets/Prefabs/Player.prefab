@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 7695816535889408898}
   - component: {fileID: 7695816535889408909}
   - component: {fileID: 7695816535889408896}
-  - component: {fileID: 7695816535889408902}
   - component: {fileID: 7695816535889408897}
   - component: {fileID: 7695816535889408903}
   - component: {fileID: 8986537325559375923}
@@ -158,20 +157,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.007853508, y: -0.08900672}
   m_Size: {x: 0.5444946, y: 0.7382153}
   m_Direction: 0
---- !u!114 &7695816535889408902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7695816535889408908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190485aa8b8fb3a4eb9cc9c16028bb46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  player: {fileID: 7695816535889408908}
 --- !u!114 &7695816535889408897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: 151ef3e581937ec47b6c73b6b84f2a08,
+    type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
