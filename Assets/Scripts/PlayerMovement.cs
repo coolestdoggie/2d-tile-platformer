@@ -11,10 +11,12 @@ public class PlayerMovement : MonoBehaviour
     
     private Vector2 moveInput;
     private Rigidbody2D rdbd2d;
+    private Animator myAnimator;
 
     private void Awake()
     {
         rdbd2d = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -32,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rdbd2d.velocity.y);
         rdbd2d.velocity = playerVelocity;
+        
+        bool isPlayerHasHorSpeed = Mathf.Abs(rdbd2d.velocity.x) > Mathf.Epsilon;
+        print(isPlayerHasHorSpeed);
+        myAnimator.SetBool("IsRunning", isPlayerHasHorSpeed);
     }
 
     private void FlipSprite()
