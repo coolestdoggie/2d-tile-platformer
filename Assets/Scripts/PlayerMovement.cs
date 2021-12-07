@@ -8,6 +8,7 @@ using UnityEngine.PlayerLoop;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float runSpeed = 10f;
+    [SerializeField] private float jumpSpeed = 5f;
     
     private Vector2 moveInput;
     private Rigidbody2D rdbd2d;
@@ -29,7 +30,14 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
-    
+
+    private void OnJump(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            rdbd2d.velocity += new Vector2(0f, jumpSpeed);
+        }
+    }
     void Run()
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, rdbd2d.velocity.y);
