@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Ground
   - Player
-  - 
+  - Ladders
   - 
   - 
   - 
@@ -47,8 +47,11 @@ TagManager:
   - name: Lava
     uniqueID: 3434761639
     locked: 0
-  - name: Foreground
+  - name: Platforms
     uniqueID: 225211437
+    locked: 0
+  - name: Ladders
+    uniqueID: 2884404671
     locked: 0
   - name: Player
     uniqueID: 2523653109
