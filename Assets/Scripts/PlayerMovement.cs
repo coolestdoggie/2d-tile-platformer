@@ -51,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
         rdbd2d.velocity = playerVelocity;
         
         bool isPlayerHasHorSpeed = Mathf.Abs(rdbd2d.velocity.x) > Mathf.Epsilon;
-        print(isPlayerHasHorSpeed);
         myAnimator.SetBool("IsRunning", isPlayerHasHorSpeed);
     }
 
@@ -69,12 +68,16 @@ public class PlayerMovement : MonoBehaviour
         if (!myCapsuleCollider2d.IsTouchingLayers(LayerMask.GetMask("Ladders")))
         {
             rdbd2d.gravityScale = gravityScaleAtStart;
+            myAnimator.SetBool("IsClimbing", false);
             return;
         }
 
         Vector2 climbVelocity = new Vector2(rdbd2d.velocity.x, moveInput.y * climbSpeed);
         rdbd2d.velocity = climbVelocity;
         rdbd2d.gravityScale = 0f;
+        
+        bool isPlayerHasClimbSpeed = Mathf.Abs(climbVelocity.y) > Mathf.Epsilon;
+        myAnimator.SetBool("IsClimbing", isPlayerHasClimbSpeed);
     }
 
 }
