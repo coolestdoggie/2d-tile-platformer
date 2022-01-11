@@ -122,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013565779, y: -0.08900672}
-  m_Size: {x: 0.4645257, y: 0.7382153}
+  m_Offset: {x: 0.009009361, y: 0.0036348104}
+  m_Size: {x: 0.30961704, y: 0.55293226}
   m_Direction: 0
 --- !u!114 &8986537325559375923
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &2660575452807689982
